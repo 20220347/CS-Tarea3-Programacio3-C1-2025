@@ -5,6 +5,7 @@ const path = require('path');
 
 const filePath = path.join(__dirname, '../data/productos.json');
 
+<<<<<<< HEAD
 function leerProductos() {
   const data = fs.readFileSync(filePath);
   return JSON.parse(data);
@@ -42,5 +43,7 @@ router.delete('/:id', (req, res) => {
   guardarProductos(productos);
   res.json({ mensaje: 'Producto eliminado' });
 });
+=======
+>>>>>>> main
 
 module.exports = router;

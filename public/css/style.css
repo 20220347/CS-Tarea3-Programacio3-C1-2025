@@ -2,6 +2,7 @@ body {
   background-color: #f8f9fa;
 }
 
+<<<<<<< HEAD
 /* Ajuste de la tarjeta */
 .card {
   border-radius: 0.5rem;
@@ -47,3 +48,5 @@ body {
   border-top: 1px solid #ddd;
   margin: 0.75rem 0;
 }
+=======
+>>>>>>> main
