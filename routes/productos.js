@@ -8,10 +8,13 @@ const filePath = path.join(__dirname, '../data/productos.json');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> feature/agregar-producto
 =======
 >>>>>>> feature/editar-producto
+=======
+>>>>>>> feature/listar-productos
 function leerProductos() {
   const data = fs.readFileSync(filePath);
   return JSON.parse(data);
@@ -51,11 +54,14 @@ router.delete('/:id', (req, res) => {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 >>>>>>> feature/agregar-producto
 =======
 >>>>>>> feature/editar-producto
+=======
+>>>>>>> feature/listar-productos
 
 module.exports = router;

@@ -11,6 +11,7 @@ const detalleProducto = document.getElementById('detalleProducto');
 const btnConfirmarEliminar = document.getElementById('btnConfirmarEliminar');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const buscador = document.getElementById('buscador');
 
 let idProductoEliminar = null;
@@ -26,11 +27,17 @@ let idProductoEliminar = null;
 let idProductoEliminar = null;
 
 >>>>>>> feature/editar-producto
+=======
+
+let idProductoEliminar = null;
+
+>>>>>>> feature/listar-productos
 function cargarProductos() {
   fetch('/api/productos')
     .then(res => res.json())
     .then(data => {
       productos = data;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       mostrarProductos(); // Mostrar todos inicialmente
@@ -57,6 +64,8 @@ function mostrarProductos(productosMostrar = productos) {
 =======
 =======
 >>>>>>> feature/editar-producto
+=======
+>>>>>>> feature/listar-productos
       mostrarProductos();
     });
 }
@@ -81,9 +90,12 @@ function mostrarProductos() {
 
         <!-- Body con descripción, cantidad, precio -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature/agregar-producto
 =======
 >>>>>>> feature/editar-producto
+=======
+>>>>>>> feature/listar-productos
         <div class="card-body">
           <p class="text-secondary">${p.descripcion || ''}</p>
           <hr class="hr-custom">
@@ -92,12 +104,16 @@ function mostrarProductos() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature/agregar-producto
 =======
 
 >>>>>>> feature/editar-producto
+=======
+
+>>>>>>> feature/listar-productos
         <!-- Footer con botones de acción -->
         <div class="card-footer">
           <hr class="hr-custom">
@@ -119,6 +135,7 @@ function mostrarProductos() {
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Función para filtrar productos según el término de búsqueda
@@ -143,6 +160,9 @@ buscador.addEventListener('input', filtrarProductos);
 =======
 // 2. Enviar datos (Agregar o Editar)
 >>>>>>> feature/editar-producto
+=======
+// 2. Enviar datos (Agregar o Editar)
+>>>>>>> feature/listar-productos
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -182,23 +202,33 @@ formulario.addEventListener('submit', (e) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Ver detalles del producto en un modal
 =======
 // 3. Ver detalles en un modal
 >>>>>>> feature/agregar-producto
+=======
+// 3. Ver detalles en un modal
+>>>>>>> feature/listar-productos
 function verProducto(id) {
   const producto = productos.find(p => p.id === id);
   if (producto) {
     detalleProducto.innerHTML = `
 <<<<<<< HEAD
+<<<<<<< HEAD
       <img src="${producto.imagen || 'https://via.placeholder.com/300x200'}" class="img-fluid mb-3" alt="${producto.nombre}">
 =======
+=======
+>>>>>>> feature/listar-productos
       <img
         src="${producto.imagen || 'https://via.placeholder.com/300x200'}"
         class="img-fluid mb-3"
         alt="${producto.nombre}"
       >
+<<<<<<< HEAD
 >>>>>>> feature/agregar-producto
+=======
+>>>>>>> feature/listar-productos
       <h5>${producto.nombre}</h5>
       <p><strong>Descripción:</strong> ${producto.descripcion}</p>
       <p><strong>Cantidad:</strong> ${producto.cantidad}</p>
@@ -209,7 +239,11 @@ function verProducto(id) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Cargar datos en el formulario para editar
+=======
+// 4. Cargar datos en el formulario para Editar
+>>>>>>> feature/listar-productos
 function cargarEdicion(id) {
   const producto = productos.find(p => p.id === id);
   if (producto) {
@@ -223,13 +257,21 @@ function cargarEdicion(id) {
   }
 }
 
+<<<<<<< HEAD
 // Confirmar eliminación
+=======
+// 5. Confirmar eliminación
+>>>>>>> feature/listar-productos
 function confirmarEliminacion(id) {
   idProductoEliminar = id;
   modalEliminar.show();
 }
 
+<<<<<<< HEAD
 // Eliminar producto
+=======
+// 6. Eliminar producto
+>>>>>>> feature/listar-productos
 btnConfirmarEliminar.addEventListener('click', () => {
   if (idProductoEliminar) {
     fetch(`/api/productos/${idProductoEliminar}`, { method: 'DELETE' })
@@ -240,6 +282,7 @@ btnConfirmarEliminar.addEventListener('click', () => {
       });
   }
 });
+<<<<<<< HEAD
 =======
 
 
@@ -248,5 +291,7 @@ btnConfirmarEliminar.addEventListener('click', () => {
 
 
 >>>>>>> feature/editar-producto
+=======
+>>>>>>> feature/listar-productos
 
 cargarProductos();
