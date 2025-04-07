@@ -9,16 +9,23 @@ const modalVer = new bootstrap.Modal(document.getElementById('modalVer'));
 const modalEliminar = new bootstrap.Modal(document.getElementById('modalEliminar'));
 const detalleProducto = document.getElementById('detalleProducto');
 const btnConfirmarEliminar = document.getElementById('btnConfirmarEliminar');
+<<<<<<< HEAD
 const buscador = document.getElementById('buscador');
 
 let idProductoEliminar = null;
 
 // Cargar productos desde el backend
+=======
+
+let idProductoEliminar = null;
+
+>>>>>>> feature/agregar-producto
 function cargarProductos() {
   fetch('/api/productos')
     .then(res => res.json())
     .then(data => {
       productos = data;
+<<<<<<< HEAD
       mostrarProductos(); // Mostrar todos inicialmente
     });
 }
@@ -40,12 +47,41 @@ function mostrarProductos(productosMostrar = productos) {
         <!-- Imagen -->
         <img src="${imagen}" class="card-img-top" alt="${p.nombre}">
         <!-- Body con descripción, cantidad y precio -->
+=======
+      mostrarProductos();
+    });
+}
+
+// 1. Mostrar los productos como tarjetas
+function mostrarProductos() {
+  lista.innerHTML = '';
+  productos.forEach(p => {
+    const col = document.createElement('div');
+    col.className = 'col';
+
+    const imagen = p.imagen || 'https://via.placeholder.com/300x200';
+    col.innerHTML = `
+      <div class="card">
+        <!-- Imagen -->
+        <img src="${imagen}" class="card-img-top" alt="${p.nombre}">
+
+        <!-- Header con el título -->
+        <div class="card-header">
+          <h5 class="mb-0 text-primary">${p.nombre}</h5>
+        </div>
+
+        <!-- Body con descripción, cantidad, precio -->
+>>>>>>> feature/agregar-producto
         <div class="card-body">
           <p class="text-secondary">${p.descripcion || ''}</p>
           <hr class="hr-custom">
           <p class="mb-1"><strong>Cantidad:</strong> ${p.cantidad}</p>
           <p class="mb-1"><strong>Precio:</strong> $${p.precio}</p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/agregar-producto
         <!-- Footer con botones de acción -->
         <div class="card-footer">
           <hr class="hr-custom">
@@ -67,6 +103,7 @@ function mostrarProductos(productosMostrar = productos) {
   });
 }
 
+<<<<<<< HEAD
 // Función para filtrar productos según el término de búsqueda
 function filtrarProductos() {
   const termino = buscador.value.toLowerCase();
@@ -83,6 +120,9 @@ buscador.addEventListener('input', filtrarProductos);
 // Funciones CRUD existentes
 
 // Agregar o actualizar un producto
+=======
+// 2. Enviar datos (Agregar o Editar)
+>>>>>>> feature/agregar-producto
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -120,12 +160,24 @@ formulario.addEventListener('submit', (e) => {
   }
 });
 
+<<<<<<< HEAD
 // Ver detalles del producto en un modal
+=======
+// 3. Ver detalles en un modal
+>>>>>>> feature/agregar-producto
 function verProducto(id) {
   const producto = productos.find(p => p.id === id);
   if (producto) {
     detalleProducto.innerHTML = `
+<<<<<<< HEAD
       <img src="${producto.imagen || 'https://via.placeholder.com/300x200'}" class="img-fluid mb-3" alt="${producto.nombre}">
+=======
+      <img
+        src="${producto.imagen || 'https://via.placeholder.com/300x200'}"
+        class="img-fluid mb-3"
+        alt="${producto.nombre}"
+      >
+>>>>>>> feature/agregar-producto
       <h5>${producto.nombre}</h5>
       <p><strong>Descripción:</strong> ${producto.descripcion}</p>
       <p><strong>Cantidad:</strong> ${producto.cantidad}</p>
@@ -135,6 +187,7 @@ function verProducto(id) {
   }
 }
 
+<<<<<<< HEAD
 // Cargar datos en el formulario para editar
 function cargarEdicion(id) {
   const producto = productos.find(p => p.id === id);
@@ -166,5 +219,9 @@ btnConfirmarEliminar.addEventListener('click', () => {
       });
   }
 });
+=======
+
+
+>>>>>>> feature/agregar-producto
 
 cargarProductos();

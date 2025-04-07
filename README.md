@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# CS-Tarea3-Programacio3-C1-2025
+Creacion de pagina sencilla para presentación de CRUD en GIT
+=======
+>>>>>>> feature/agregar-producto
 # Inventario
 
 Inventario es una aplicación web elegante y funcional para el control de stock. Permite gestionar productos mediante operaciones CRUD (crear, leer, actualizar y eliminar) utilizando HTML, CSS, JavaScript y Node.js con Express. Los datos se almacenan en un archivo JSON. La interfaz está diseñada con Bootstrap 5 y Bootstrap Icons, ofreciendo una experiencia visual moderna y atractiva.
@@ -12,3 +19,7 @@ Inventario es una aplicación web elegante y funcional para el control de stock.
 
 ## Estructura del Proyecto
 
+<<<<<<< HEAD
+=======
+>>>>>>> 18d48dd (Commit inicial: Proyecto Inventario base funcional)
+>>>>>>> feature/agregar-producto
