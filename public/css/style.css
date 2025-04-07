@@ -1,0 +1,49 @@
+body {
+  background-color: #f8f9fa;
+}
+
+/* Ajuste de la tarjeta */
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Imagen del producto (puedes ajustar height/cover si quieres) */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Header con el nombre del producto */
+.card-header {
+  background-color: #fff;
+  border-bottom: none; /* ocultamos borde por defecto */
+  padding: 1rem 1.25rem;
+}
+
+/* Body: donde se muestra descripción, cantidad, precio */
+.card-body {
+  padding: 1rem 1.25rem;
+}
+
+/* Footer con los botones */
+.card-footer {
+  background-color: #fff;
+  border-top: none; /* ocultamos borde por defecto */
+}
+
+/* Los íconos y el texto en los botones sean un poco más visibles */
+.btn-sm {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Línea divisoria elegante en el body y en el footer */
+.hr-custom {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0.75rem 0;
+}
