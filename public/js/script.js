@@ -10,6 +10,7 @@ const modalEliminar = new bootstrap.Modal(document.getElementById('modalEliminar
 const detalleProducto = document.getElementById('detalleProducto');
 const btnConfirmarEliminar = document.getElementById('btnConfirmarEliminar');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const buscador = document.getElementById('buscador');
 
 let idProductoEliminar = null;
@@ -20,11 +21,17 @@ let idProductoEliminar = null;
 let idProductoEliminar = null;
 
 >>>>>>> feature/agregar-producto
+=======
+
+let idProductoEliminar = null;
+
+>>>>>>> feature/editar-producto
 function cargarProductos() {
   fetch('/api/productos')
     .then(res => res.json())
     .then(data => {
       productos = data;
+<<<<<<< HEAD
 <<<<<<< HEAD
       mostrarProductos(); // Mostrar todos inicialmente
     });
@@ -48,6 +55,8 @@ function mostrarProductos(productosMostrar = productos) {
         <img src="${imagen}" class="card-img-top" alt="${p.nombre}">
         <!-- Body con descripción, cantidad y precio -->
 =======
+=======
+>>>>>>> feature/editar-producto
       mostrarProductos();
     });
 }
@@ -71,7 +80,10 @@ function mostrarProductos() {
         </div>
 
         <!-- Body con descripción, cantidad, precio -->
+<<<<<<< HEAD
 >>>>>>> feature/agregar-producto
+=======
+>>>>>>> feature/editar-producto
         <div class="card-body">
           <p class="text-secondary">${p.descripcion || ''}</p>
           <hr class="hr-custom">
@@ -79,9 +91,13 @@ function mostrarProductos() {
           <p class="mb-1"><strong>Precio:</strong> $${p.precio}</p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature/agregar-producto
+=======
+
+>>>>>>> feature/editar-producto
         <!-- Footer con botones de acción -->
         <div class="card-footer">
           <hr class="hr-custom">
@@ -104,6 +120,7 @@ function mostrarProductos() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Función para filtrar productos según el término de búsqueda
 function filtrarProductos() {
   const termino = buscador.value.toLowerCase();
@@ -123,6 +140,9 @@ buscador.addEventListener('input', filtrarProductos);
 =======
 // 2. Enviar datos (Agregar o Editar)
 >>>>>>> feature/agregar-producto
+=======
+// 2. Enviar datos (Agregar o Editar)
+>>>>>>> feature/editar-producto
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -160,6 +180,7 @@ formulario.addEventListener('submit', (e) => {
   }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Ver detalles del producto en un modal
 =======
@@ -223,5 +244,9 @@ btnConfirmarEliminar.addEventListener('click', () => {
 
 
 >>>>>>> feature/agregar-producto
+=======
+
+
+>>>>>>> feature/editar-producto
 
 cargarProductos();
