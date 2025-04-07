@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 # CS-Tarea3-Programacio3-C1-2025
 Creacion de pagina sencilla para presentación de CRUD en GIT
 =======
@@ -28,16 +23,3 @@ Inventario es una aplicación web elegante y funcional para el control de stock.
 
 ## Estructura del Proyecto
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 18d48dd (Commit inicial: Proyecto Inventario base funcional)
->>>>>>> feature/agregar-producto
-=======
->>>>>>> feature/editar-producto
-=======
->>>>>>> feature/listar-productos
-=======
->>>>>>> feature/eliminar-producto
