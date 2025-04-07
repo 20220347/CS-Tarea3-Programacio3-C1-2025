@@ -12,6 +12,7 @@ const btnConfirmarEliminar = document.getElementById('btnConfirmarEliminar');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const buscador = document.getElementById('buscador');
 
 let idProductoEliminar = null;
@@ -32,11 +33,17 @@ let idProductoEliminar = null;
 let idProductoEliminar = null;
 
 >>>>>>> feature/listar-productos
+=======
+
+let idProductoEliminar = null;
+
+>>>>>>> feature/eliminar-producto
 function cargarProductos() {
   fetch('/api/productos')
     .then(res => res.json())
     .then(data => {
       productos = data;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +73,8 @@ function mostrarProductos(productosMostrar = productos) {
 >>>>>>> feature/editar-producto
 =======
 >>>>>>> feature/listar-productos
+=======
+>>>>>>> feature/eliminar-producto
       mostrarProductos();
     });
 }
@@ -91,11 +100,14 @@ function mostrarProductos() {
         <!-- Body con descripción, cantidad, precio -->
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature/agregar-producto
 =======
 >>>>>>> feature/editar-producto
 =======
 >>>>>>> feature/listar-productos
+=======
+>>>>>>> feature/eliminar-producto
         <div class="card-body">
           <p class="text-secondary">${p.descripcion || ''}</p>
           <hr class="hr-custom">
@@ -105,6 +117,7 @@ function mostrarProductos() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> feature/agregar-producto
@@ -114,6 +127,9 @@ function mostrarProductos() {
 =======
 
 >>>>>>> feature/listar-productos
+=======
+
+>>>>>>> feature/eliminar-producto
         <!-- Footer con botones de acción -->
         <div class="card-footer">
           <hr class="hr-custom">
@@ -135,6 +151,7 @@ function mostrarProductos() {
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +180,9 @@ buscador.addEventListener('input', filtrarProductos);
 =======
 // 2. Enviar datos (Agregar o Editar)
 >>>>>>> feature/listar-productos
+=======
+// 2. Enviar datos (Agregar o Editar)
+>>>>>>> feature/eliminar-producto
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -200,6 +220,7 @@ formulario.addEventListener('submit', (e) => {
   }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,16 +283,25 @@ function cargarEdicion(id) {
 =======
 // 5. Confirmar eliminación
 >>>>>>> feature/listar-productos
+=======
+
+
+// 5. Confirmar eliminación
+>>>>>>> feature/eliminar-producto
 function confirmarEliminacion(id) {
   idProductoEliminar = id;
   modalEliminar.show();
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Eliminar producto
 =======
 // 6. Eliminar producto
 >>>>>>> feature/listar-productos
+=======
+// 6. Eliminar producto
+>>>>>>> feature/eliminar-producto
 btnConfirmarEliminar.addEventListener('click', () => {
   if (idProductoEliminar) {
     fetch(`/api/productos/${idProductoEliminar}`, { method: 'DELETE' })
@@ -283,6 +313,7 @@ btnConfirmarEliminar.addEventListener('click', () => {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -293,5 +324,7 @@ btnConfirmarEliminar.addEventListener('click', () => {
 >>>>>>> feature/editar-producto
 =======
 >>>>>>> feature/listar-productos
+=======
+>>>>>>> feature/eliminar-producto
 
 cargarProductos();
