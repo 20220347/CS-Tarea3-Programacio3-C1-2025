@@ -13,11 +13,15 @@ const btnConfirmarEliminar = document.getElementById('btnConfirmarEliminar');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/buscar-producto
 const buscador = document.getElementById('buscador');
 
 let idProductoEliminar = null;
 
 // Cargar productos desde el backend
+<<<<<<< HEAD
 =======
 
 let idProductoEliminar = null;
@@ -38,11 +42,14 @@ let idProductoEliminar = null;
 let idProductoEliminar = null;
 
 >>>>>>> feature/eliminar-producto
+=======
+>>>>>>> feature/buscar-producto
 function cargarProductos() {
   fetch('/api/productos')
     .then(res => res.json())
     .then(data => {
       productos = data;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,26 +83,27 @@ function mostrarProductos(productosMostrar = productos) {
 =======
 >>>>>>> feature/eliminar-producto
       mostrarProductos();
+=======
+      mostrarProductos(); // Mostrar todos inicialmente
+>>>>>>> feature/buscar-producto
     });
 }
 
-// 1. Mostrar los productos como tarjetas
-function mostrarProductos() {
+// Mostrar productos (permite pasar un arreglo filtrado)
+function mostrarProductos(productosMostrar = productos) {
   lista.innerHTML = '';
-  productos.forEach(p => {
+  productosMostrar.forEach(p => {
     const col = document.createElement('div');
     col.className = 'col';
-
     const imagen = p.imagen || 'https://via.placeholder.com/300x200';
+
     col.innerHTML = `
       <div class="card">
-        <!-- Imagen -->
-        <img src="${imagen}" class="card-img-top" alt="${p.nombre}">
-
-        <!-- Header con el título -->
+        <!-- Header con el nombre -->
         <div class="card-header">
           <h5 class="mb-0 text-primary">${p.nombre}</h5>
         </div>
+<<<<<<< HEAD
 
         <!-- Body con descripción, cantidad, precio -->
 <<<<<<< HEAD
@@ -108,12 +116,18 @@ function mostrarProductos() {
 >>>>>>> feature/listar-productos
 =======
 >>>>>>> feature/eliminar-producto
+=======
+        <!-- Imagen -->
+        <img src="${imagen}" class="card-img-top" alt="${p.nombre}">
+        <!-- Body con descripción, cantidad y precio -->
+>>>>>>> feature/buscar-producto
         <div class="card-body">
           <p class="text-secondary">${p.descripcion || ''}</p>
           <hr class="hr-custom">
           <p class="mb-1"><strong>Cantidad:</strong> ${p.cantidad}</p>
           <p class="mb-1"><strong>Precio:</strong> $${p.precio}</p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,6 +144,8 @@ function mostrarProductos() {
 =======
 
 >>>>>>> feature/eliminar-producto
+=======
+>>>>>>> feature/buscar-producto
         <!-- Footer con botones de acción -->
         <div class="card-footer">
           <hr class="hr-custom">
@@ -155,6 +171,9 @@ function mostrarProductos() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/buscar-producto
 // Función para filtrar productos según el término de búsqueda
 function filtrarProductos() {
   const termino = buscador.value.toLowerCase();
@@ -171,6 +190,7 @@ buscador.addEventListener('input', filtrarProductos);
 // Funciones CRUD existentes
 
 // Agregar o actualizar un producto
+<<<<<<< HEAD
 =======
 // 2. Enviar datos (Agregar o Editar)
 >>>>>>> feature/agregar-producto
@@ -183,6 +203,8 @@ buscador.addEventListener('input', filtrarProductos);
 =======
 // 2. Enviar datos (Agregar o Editar)
 >>>>>>> feature/eliminar-producto
+=======
+>>>>>>> feature/buscar-producto
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -224,6 +246,7 @@ formulario.addEventListener('submit', (e) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Ver detalles del producto en un modal
 =======
 // 3. Ver detalles en un modal
@@ -231,10 +254,14 @@ formulario.addEventListener('submit', (e) => {
 =======
 // 3. Ver detalles en un modal
 >>>>>>> feature/listar-productos
+=======
+// Ver detalles del producto en un modal
+>>>>>>> feature/buscar-producto
 function verProducto(id) {
   const producto = productos.find(p => p.id === id);
   if (producto) {
     detalleProducto.innerHTML = `
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <img src="${producto.imagen || 'https://via.placeholder.com/300x200'}" class="img-fluid mb-3" alt="${producto.nombre}">
@@ -250,6 +277,9 @@ function verProducto(id) {
 >>>>>>> feature/agregar-producto
 =======
 >>>>>>> feature/listar-productos
+=======
+      <img src="${producto.imagen || 'https://via.placeholder.com/300x200'}" class="img-fluid mb-3" alt="${producto.nombre}">
+>>>>>>> feature/buscar-producto
       <h5>${producto.nombre}</h5>
       <p><strong>Descripción:</strong> ${producto.descripcion}</p>
       <p><strong>Cantidad:</strong> ${producto.cantidad}</p>
@@ -261,10 +291,14 @@ function verProducto(id) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Cargar datos en el formulario para editar
 =======
 // 4. Cargar datos en el formulario para Editar
 >>>>>>> feature/listar-productos
+=======
+// Cargar datos en el formulario para editar
+>>>>>>> feature/buscar-producto
 function cargarEdicion(id) {
   const producto = productos.find(p => p.id === id);
   if (producto) {
@@ -279,6 +313,7 @@ function cargarEdicion(id) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Confirmar eliminación
 =======
 // 5. Confirmar eliminación
@@ -288,11 +323,15 @@ function cargarEdicion(id) {
 
 // 5. Confirmar eliminación
 >>>>>>> feature/eliminar-producto
+=======
+// Confirmar eliminación
+>>>>>>> feature/buscar-producto
 function confirmarEliminacion(id) {
   idProductoEliminar = id;
   modalEliminar.show();
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Eliminar producto
@@ -302,6 +341,9 @@ function confirmarEliminacion(id) {
 =======
 // 6. Eliminar producto
 >>>>>>> feature/eliminar-producto
+=======
+// Eliminar producto
+>>>>>>> feature/buscar-producto
 btnConfirmarEliminar.addEventListener('click', () => {
   if (idProductoEliminar) {
     fetch(`/api/productos/${idProductoEliminar}`, { method: 'DELETE' })
